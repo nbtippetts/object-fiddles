@@ -110,9 +110,9 @@ Instead, console.log your whole backPack object and then check out the console. 
  var album = {
    Jazz: 3.65,
    Jamming: 3.32,
-   The way I am: 4.51,
-   Castles made sand: 2.46,
-   Over the hill and far away: 4.50
+   ThewayIam: 4.51,
+   Castlesmadesand: 2.46,
+   Overthehillandfaraway: 4.50
  };
 
 //Now, loop through your album object alerting every song title individually.
