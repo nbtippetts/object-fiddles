@@ -63,7 +63,7 @@ that is named color, with the value being the color of your backpack. */
 
 //After you do the above, alert your entire backPack object.
 
-alert(backPack);
+
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -94,7 +94,7 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   for (var p in alsoMe){
-    alert( p + ": " + alsoMe[p] );
+    console.log( p + ": " + alsoMe[p] );
   };
 
 
@@ -118,7 +118,7 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Now, loop through your album object alerting every song title individually.
 
   for (var song in album){
-    alert( song );
+    console.log( song + ": " + album[song] );
 };
 
 
@@ -133,19 +133,17 @@ Instead, console.log your whole backPack object and then check out the console. 
   var states = {
     Utah: 1500000,
     nevada: 0,
-    New York: 200000,
+    NewYork: 200000,
     califorina: 12,
     colorado: 45673673
   };
 
-//Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-  for (var pup in states){
-    if (states[pup] > 30000){
-      alert(states);
-    }
-  };
-
+for (var pup in states){
+  if (states[pup] >= 3000){
+    console.log(pup);
+  }
+};
 
 
 
@@ -162,14 +160,12 @@ var user1 = {
     username: 'tylermcginnis33',
     age: 0
 }
-/*Above you're given a user object. Loop through the user object checking to make sure
-that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
   for (var n in user1){
-    if (user1[n] !== true)
+    if (!user1[n]){
     delete user1[n];
   }
+}
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   user1.name = 'Noah Tippetts';
@@ -194,18 +190,13 @@ var user2 = {
         birthday: '05/02/1990',
         username: 'tylermcginnis33',
         sayName: function(){
-            alert('Email is : ' + this.email);
+            console.log('Email is : ' + this.email);
         }
 };
-//Let's say I, the user, decided to change my name and email address to the following
-// name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
-
   user2.name = 'Tyler S. McGinnis';
   user2.email = 'tyler.mcginnis@devmounta.in';
-
-//Now call the sayName method that's on the user object which will alert the users email
-
-  sayName();
+  user2.pwHash = 'hey';
+  user2.sayName();
 
 
 
